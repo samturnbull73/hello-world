@@ -1,0 +1,2 @@
+## Create yml file from command 
+kubectl run redis --image=redis --dry-run=client -o yaml > pod.yml
