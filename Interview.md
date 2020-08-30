@@ -27,10 +27,9 @@ Name: webapp-service; Type: NodePort; targetPort: 8080; port: 8080; nodePort: 30
 kubectl expose deployment simple-webapp-deployment --name=simple-webapp-service --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml > a.yml
 
 Add line NodePort in a.yml
+```
 apiVersion: v1
-
 kind: Service
-
 metadata:
   creationTimestamp: null
   name: simple-webapp-service
@@ -44,3 +43,4 @@ spec:
   type: NodePort
 status:
   loadBalancer: {}
+```
