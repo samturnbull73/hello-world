@@ -28,7 +28,9 @@ kubectl expose deployment simple-webapp-deployment --name=simple-webapp-service 
 
 Add line NodePort in a.yml
 apiVersion: v1
+
 kind: Service
+
 metadata:
   creationTimestamp: null
   name: simple-webapp-service
