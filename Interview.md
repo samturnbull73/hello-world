@@ -24,7 +24,7 @@ Save it to a file, make necessary changes to the file (for example, adding more 
 Create a new service to access the web application using the service-definition-1.yaml file
 Name: webapp-service; Type: NodePort; targetPort: 8080; port: 8080; nodePort: 30080; selector: simple-webapp
 
-kubectl expose deployment simple-webapp-deployment --name=simple-webapp-service --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml > a.yml
+kubectl expose deployment simple-webapp-deployment --name=webapp-service --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml > a.yml
 
 Add line NodePort in a.yml
 ```
